@@ -24,6 +24,10 @@ jobs:
       - name: Test
         run: |
           pytest test_*.py --junitxml='test_report.xml'
+      - name: Show report
+        uses: mikepenz/action-junit-report@v3.1.0-b01
+        with:
+          report_paths: './test_report.xml'
       - name: Upload test report
         uses: actions/upload-artifact@v3.1.0
         with:
