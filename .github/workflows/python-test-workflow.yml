@@ -23,4 +23,4 @@ jobs:
           ls ./test_*.py
       - name: Test
         run: |
-          pytest test_*.py
+          pytest test_*.py --junitxml='test_report.xml'
